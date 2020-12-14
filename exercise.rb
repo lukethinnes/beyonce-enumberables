@@ -25,21 +25,46 @@ beyonceHash = {
       { title: 'Epic', year: 2013, rating: 7},
       { title: 'The Fighting Temptations', year: 2003, rating: 5}
     ]
-  };
+  }
+
 
 # 1. puts all the songs
 # 2. puts all the movies
-# 3. create an array with a list of all of Beyonce's hit song titles
+# !! 3. create an array with a list of all of Beyonce's hit song titles
+
+# def hit_songs(beyonceHash)
+#   beyonceHash[:hits].map do |hit|
+#     hit[:title]
+#   end
+# end
 # 4. create an array with a list of all of Beyonce's fierceness ratings
 # 5. give me all the songs where Beyonce is wearing a bodysuit or a bodysuit is part of the video theme
-# 6. create an array with all of the songs where Beyonce's fierceness is greater than or equal to 8
+# !! 6. create an array with all of the songs where Beyonce's fierceness is greater than or equal to 8
+# def high_fierceness (beyonceHash)
+#   beyonceHash[:hits].select do |hit|
+#     hit[:fierceness] >= 8
+#   end
+# end
 # 7. create an array with all of the movies Beyonce made in 2006 and after
 # 8. find all the hit songs where beyonce was in a group
 # 9. find a hit song where Beyonce's hair is blonde
-# 10. find the hit song sorry
+# !! 10. find the hit song sorry
+# def find_sorry (beyonceHash)
+#   beyonceHash[:hits].find do |hit|
+#     hit[:title] == 'sorry'
+#   end
+# end
 # 11. find all hit songs where Beyonce's fierceness rating is 10
-# 12. sum up Beyonces fierceness value for all of her hit songs
-# 13. get the average fierceness value for all of her hit songs
+# !! 12. sum up Beyonces fierceness value for all of her hit songs
+def fierce_value(beyonceHash)
+  beyonceHash[:hits].reduce(0) do |acc, element|
+    acc+element
+  end
+end
+# !! 13. get the average fierceness value for all of her hit songs
+# def average_fierce
+
+# end
 # 14. sum up Beyonces rating value for all of her movies
 # 15. get the average rating value for all of her movies
 # 16. sum up the total number of dancers in all of the hit song videos
@@ -49,4 +74,3 @@ beyonceHash = {
 # 20. create a hash with beyonces hairstyles with a tally of each hairstyle ie { 'blonde': 3, ect.}  
 
 binding.pry
-0
